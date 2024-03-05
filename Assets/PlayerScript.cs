@@ -18,11 +18,11 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    public static Card Create()
+    public static Card DrawCard()
     {
         GameObject newCardObject = Instantiate(card) as GameObject;
         Card newCard = newCardObject.GetComponent<Card>();
-
+        
 
 
         return newCard;

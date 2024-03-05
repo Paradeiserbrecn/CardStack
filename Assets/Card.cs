@@ -13,6 +13,7 @@ public class Card : MonoBehaviour
         JokerRed = 53, JokerBlack = 54,
     }
     SpriteRenderer renderer;
+    Texture2D texture;
     public readonly CardTypes cardType;
     // Start is called before the first frame update
     
@@ -20,7 +21,7 @@ public class Card : MonoBehaviour
     {
         this.cardType = cardType;
         renderer = GetComponent<SpriteRenderer>();
-        renderer.sprite = 
+        // TODO: Use the card texture for the renderer
     }
 
     // Update is called once per frame
