@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WZ9Od_0
+      name: Cards_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e67521289c542b46816a1acc14d648a
-      internalID: -664118588
+      spriteID: 834b7e1b6502aeb4cba0f5f892544ddb
+      internalID: -665931989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_1
+      name: Cards_1
       rect:
         serializedVersion: 2
         x: 81
@@ -145,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9802cc8022236664d98abd634d2006e6
-      internalID: 1482309674
+      spriteID: 4b03a5dce48d3e945bd0e7ec6a21a3f6
+      internalID: -299504179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_2
+      name: Cards_2
       rect:
         serializedVersion: 2
         x: 162
@@ -166,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6099b37bb73dc264f910ffbad93a2032
-      internalID: 1284828235
+      spriteID: 5cea06834b7d78740aa8858f1f66756f
+      internalID: -1541714388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_3
+      name: Cards_3
       rect:
         serializedVersion: 2
         x: 243
@@ -187,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c33f921c8203fd647be32ae0793274f9
-      internalID: 1574324496
+      spriteID: 0aaf2fbbddf39c347b89169948ff19f9
+      internalID: 648872338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_4
+      name: Cards_4
       rect:
         serializedVersion: 2
         x: 324
@@ -208,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03c8ccb019031d84388f66d1d991b5c1
-      internalID: 1407720715
+      spriteID: e602f5ef57024904f937152b765cfc8e
+      internalID: -486167073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_5
+      name: Cards_5
       rect:
         serializedVersion: 2
         x: 405
@@ -229,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7e464796275544586423e67098aca9
-      internalID: -932333720
+      spriteID: 581bfa13fbd747a40bcebbbc6bf6465f
+      internalID: 1873402856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_6
+      name: Cards_6
       rect:
         serializedVersion: 2
         x: 486
@@ -250,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e78c28e4a44cc8f4f9836dd1e448d93b
-      internalID: -1578792055
+      spriteID: 6004a4ca8b0534245947203f209debb3
+      internalID: -47713427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_7
+      name: Cards_7
       rect:
         serializedVersion: 2
         x: 567
@@ -271,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: debea70b98053fa4080b68c3e25e6fad
-      internalID: -2082442834
+      spriteID: 864a75d306d40be4a8c5d4004112ddcc
+      internalID: 377498254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_8
+      name: Cards_8
       rect:
         serializedVersion: 2
         x: 648
@@ -292,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85b28c0b97ee65546839c2a4be04c126
-      internalID: -1883381020
+      spriteID: 21d2c8d5022d4ba489a06234028460a1
+      internalID: -1011424462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_9
+      name: Cards_9
       rect:
         serializedVersion: 2
         x: 729
@@ -313,14 +326,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d80703783ef9af4da7cb2519680772c
-      internalID: -1353203585
+      spriteID: b0f98824c96af0947975563f32a40308
+      internalID: 456752323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_10
+      name: Cards_10
       rect:
         serializedVersion: 2
         x: 810
@@ -334,14 +347,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edca84198acf7c9449205b65b50e5f97
-      internalID: 1262004417
+      spriteID: fd59713524bedc94490b5da2fb3c8c4b
+      internalID: -546870902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_11
+      name: Cards_11
       rect:
         serializedVersion: 2
         x: 891
@@ -355,14 +368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c28642d7883b3e4f8facf8f84b0edef
-      internalID: 411426209
+      spriteID: 5a481e33f244c99438cc28195f730268
+      internalID: 1693285892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_12
+      name: Cards_12
       rect:
         serializedVersion: 2
         x: 972
@@ -376,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e94c3a85d688ae49bc12a19a9b4a615
-      internalID: -1496025363
+      spriteID: e77eeb4d50ac04449853691e1424d263
+      internalID: 52838391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_13
+      name: Cards_13
       rect:
         serializedVersion: 2
         x: 0
@@ -397,14 +410,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7a43bedb1d6935488270486e4d67769
-      internalID: -1618617842
+      spriteID: f5b9a7d9cf2fc404f8caca22424277fa
+      internalID: -1475735336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_14
+      name: Cards_14
       rect:
         serializedVersion: 2
         x: 81
@@ -418,14 +431,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73c2da7d7bf7f9a40ba33f4a06dbc284
-      internalID: -1303801044
+      spriteID: 84db433f25a213943b8a8acba2bdf1d1
+      internalID: -1707914841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_15
+      name: Cards_15
       rect:
         serializedVersion: 2
         x: 162
@@ -439,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a3bbe391096bc4780beb5f7071ec98
-      internalID: 729818949
+      spriteID: ff8acd86af5268d46b210cdae97e3f9c
+      internalID: -320058887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_16
+      name: Cards_16
       rect:
         serializedVersion: 2
         x: 243
@@ -460,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 924318b9998f7494689c1307551d3c5f
-      internalID: 484102407
+      spriteID: a7eadd5cb2c2c874fb4e7509fd33fb1a
+      internalID: 1266345453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_17
+      name: Cards_17
       rect:
         serializedVersion: 2
         x: 324
@@ -481,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7506bf4789d33be41afb6aea51c34d25
-      internalID: 1880502123
+      spriteID: 5df8acbc9bc264841a2c8063d4b26266
+      internalID: -1629017192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_18
+      name: Cards_18
       rect:
         serializedVersion: 2
         x: 405
@@ -502,14 +515,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fdb35663b295fb44b4824448d03d9b5
-      internalID: 383382722
+      spriteID: 1f04e7564123dcb45bf724858e6fff7e
+      internalID: 1462601928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_19
+      name: Cards_19
       rect:
         serializedVersion: 2
         x: 486
@@ -523,14 +536,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d7fb91bac30d894caf8a14d4062a202
-      internalID: 2069891047
+      spriteID: edce851f7c16f8441a18973fe1662b02
+      internalID: 678446242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_20
+      name: Cards_20
       rect:
         serializedVersion: 2
         x: 567
@@ -544,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59ad4446d81846c4a8a0a7d5a2ff6849
-      internalID: 1095678468
+      spriteID: 08a4fe0a674461a478a26c6f9888a080
+      internalID: 1051972012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_21
+      name: Cards_21
       rect:
         serializedVersion: 2
         x: 648
@@ -565,14 +578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7727eb4d5bf1eb941812afa02dc977e7
-      internalID: -1778645463
+      spriteID: 350256b73c874b64398092505715db1e
+      internalID: 1954721534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_22
+      name: Cards_22
       rect:
         serializedVersion: 2
         x: 729
@@ -586,14 +599,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59845b9b2b8522d4c9f52dee5ee841c2
-      internalID: 717679610
+      spriteID: 6e5ea1e0e908ce04cb2b4abd9ab29cc9
+      internalID: 2123303669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_23
+      name: Cards_23
       rect:
         serializedVersion: 2
         x: 810
@@ -607,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6aa700360c95174fa09fd6992ee7cd5
-      internalID: -975669153
+      spriteID: 99c1b7e5b4a2d4e41ae7d0fcdd9dd303
+      internalID: -455551882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_24
+      name: Cards_24
       rect:
         serializedVersion: 2
         x: 891
@@ -628,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ba5366bd0ad1747a5c3926288614fe
-      internalID: -1778314695
+      spriteID: b8d713644bf871346b9face5cbe78c46
+      internalID: -1159185399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_25
+      name: Cards_25
       rect:
         serializedVersion: 2
         x: 972
@@ -649,14 +662,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d7287ad179921469dadc00b7ca2279
-      internalID: -137904730
+      spriteID: 6837565ed45264c48a36f57ed9b0d243
+      internalID: -1624886946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_26
+      name: Cards_26
       rect:
         serializedVersion: 2
         x: 0
@@ -670,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1f62b76b48139e4f9f10d9af4032318
-      internalID: 1897420253
+      spriteID: a92598c4ca865624f95dd0623f2b70bc
+      internalID: 2011054806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_27
+      name: Cards_27
       rect:
         serializedVersion: 2
         x: 81
@@ -691,14 +704,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f5ce4af375c7c4b9df97dbb6365ec2
-      internalID: -1704953844
+      spriteID: d58542eae09b3d943b7d237926d5b175
+      internalID: -1222632198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_28
+      name: Cards_28
       rect:
         serializedVersion: 2
         x: 162
@@ -712,14 +725,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 627f0077c549cfc42be4ff5a35e38572
-      internalID: 1592077835
+      spriteID: a5dd3783f22afa248be232f8ef6645ce
+      internalID: -235785133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_29
+      name: Cards_29
       rect:
         serializedVersion: 2
         x: 243
@@ -733,14 +746,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21d31b5f062593641b8af0cafc8b1ad2
-      internalID: -1284183720
+      spriteID: 483203d4c591c6748bd911aaf1ff7848
+      internalID: 1621978799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_30
+      name: Cards_30
       rect:
         serializedVersion: 2
         x: 324
@@ -754,14 +767,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84bcfcd88584815429cea3730533ffc1
-      internalID: -65195414
+      spriteID: 4515434dd5182e541b302a0fb85132ec
+      internalID: -1411939473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_31
+      name: Cards_31
       rect:
         serializedVersion: 2
         x: 405
@@ -775,14 +788,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88e7240ffddb5834f9559c27320d6354
-      internalID: -1191870489
+      spriteID: d59cf807d413bc7418aa77e94bcf3752
+      internalID: -1570387691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_32
+      name: Cards_32
       rect:
         serializedVersion: 2
         x: 486
@@ -796,14 +809,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3043a9176a244ec459c17d739c811d9c
-      internalID: -1640005391
+      spriteID: 52b540ef1833c774eb64c3c4b0323861
+      internalID: -1470310579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_33
+      name: Cards_33
       rect:
         serializedVersion: 2
         x: 567
@@ -817,14 +830,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5dbc0ec4f37ec74fa10be928c51cf9e
-      internalID: 1371743685
+      spriteID: 3b0ad74ca24f8874185b72661786c372
+      internalID: -163123511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_34
+      name: Cards_34
       rect:
         serializedVersion: 2
         x: 648
@@ -838,14 +851,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9617f10dc3774474cb5dfc86ef362ef2
-      internalID: 1028087467
+      spriteID: 7af4b9ef0ac2bd34e84fc60e9a8ed5ba
+      internalID: -911944076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_35
+      name: Cards_35
       rect:
         serializedVersion: 2
         x: 729
@@ -859,14 +872,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a06222530f1b7fd40aeb7891e52889ae
-      internalID: 431533116
+      spriteID: 8bd09aa7531391d4d9f6db3252821ce2
+      internalID: -1638519647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_36
+      name: Cards_36
       rect:
         serializedVersion: 2
         x: 810
@@ -880,14 +893,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac0557d468b2ef34395b5a4c2665bf1e
-      internalID: 984997337
+      spriteID: 8b993071181bc7942a908eb16c787ae9
+      internalID: -1528105539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_37
+      name: Cards_37
       rect:
         serializedVersion: 2
         x: 891
@@ -901,14 +914,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deeb4002ee7924e4788c35d252e51690
-      internalID: 310133801
+      spriteID: 7b1287cf74c6fe04a845c18773548104
+      internalID: 1804748969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_38
+      name: Cards_38
       rect:
         serializedVersion: 2
         x: 972
@@ -922,14 +935,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b42a869073bf02b46809a886ec995962
-      internalID: -1197322808
+      spriteID: c073791c657ae8b498c350b2073b025a
+      internalID: -1373563201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_39
+      name: Cards_39
       rect:
         serializedVersion: 2
         x: 0
@@ -943,14 +956,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db6c89fcd935c6e4fb7279db4801cc66
-      internalID: 431861899
+      spriteID: 656a2976d0e73d345ae1a2aeef47579c
+      internalID: 158274068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_40
+      name: Cards_40
       rect:
         serializedVersion: 2
         x: 81
@@ -964,14 +977,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 548e93b94dcba3f46a3dcde2e982fc02
-      internalID: -1982272107
+      spriteID: f9aa356dbbc8a4a4d967b5b452b0f282
+      internalID: 714047540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_41
+      name: Cards_41
       rect:
         serializedVersion: 2
         x: 162
@@ -985,14 +998,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ced14d9be6a079f4e9df0475a546d972
-      internalID: -378657474
+      spriteID: 020639f03a53c414488619afa4baa566
+      internalID: -1905947379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_42
+      name: Cards_42
       rect:
         serializedVersion: 2
         x: 243
@@ -1006,14 +1019,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a0fe411e7503b44f9e181f9a64a0153
-      internalID: -2101501352
+      spriteID: b4a868c134022cd418d2ac5cde6c0faf
+      internalID: -1195007212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_43
+      name: Cards_43
       rect:
         serializedVersion: 2
         x: 324
@@ -1027,14 +1040,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acd0c45ed717d984c85169560ee9a32d
-      internalID: -759442349
+      spriteID: dbd497c686e2b6f46af5ad0d38d5ccc7
+      internalID: -741335588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_44
+      name: Cards_44
       rect:
         serializedVersion: 2
         x: 405
@@ -1048,14 +1061,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 060d00814c6f40144abba41e24ea3e15
-      internalID: 1045271026
+      spriteID: 50c8f328be3343b4ca8fbcf82ed06f90
+      internalID: -718652204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_45
+      name: Cards_45
       rect:
         serializedVersion: 2
         x: 486
@@ -1069,14 +1082,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2862eea89e8c0384aaf33f3f9a425776
-      internalID: 709394160
+      spriteID: 6330f7f819cd8e342a0df1288a82dcab
+      internalID: 1473198693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_46
+      name: Cards_46
       rect:
         serializedVersion: 2
         x: 567
@@ -1090,14 +1103,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124a20b018abed24cb5f79416d047386
-      internalID: 268443350
+      spriteID: 55b3b267500f4b94b9a4588d90020932
+      internalID: 1580575578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_47
+      name: Cards_47
       rect:
         serializedVersion: 2
         x: 648
@@ -1111,14 +1124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 175f86b46ef90704f81f7d67302efe9e
-      internalID: 509657555
+      spriteID: fa8afd0642b0b094e98e23801301ef5b
+      internalID: -535967632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_48
+      name: Cards_48
       rect:
         serializedVersion: 2
         x: 729
@@ -1132,14 +1145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0876329087abefe4e81049fd9b360000
-      internalID: -985961561
+      spriteID: 67070d772852bcd46ba03c115ba97c57
+      internalID: -1944562169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_49
+      name: Cards_49
       rect:
         serializedVersion: 2
         x: 810
@@ -1153,14 +1166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26dadfe0ec5c50148862953c174b9a79
-      internalID: -1417422003
+      spriteID: cf25e82674b842a488238b9c282b874c
+      internalID: 1534700633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_50
+      name: Cards_50
       rect:
         serializedVersion: 2
         x: 891
@@ -1174,14 +1187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9bd7d151f1ab04438b7f914a991bf74
-      internalID: -1244004696
+      spriteID: 4f324e45d9afbd64f9aa928a0f5449b7
+      internalID: -1800795518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_51
+      name: Cards_51
       rect:
         serializedVersion: 2
         x: 972
@@ -1195,14 +1208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84efdc9526124f74b9c944d34bc2218f
-      internalID: 253718833
+      spriteID: 36ccf1a5ef2127c41ab2c63202e5a840
+      internalID: 1992810772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_52
+      name: Cards_52
       rect:
         serializedVersion: 2
         x: 0
@@ -1216,14 +1229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a302aee0b4d499429955e2eaa3e40f1
-      internalID: -1883555515
+      spriteID: d3c770f2c28105845a5534503dcb8683
+      internalID: -2015684905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_53
+      name: Cards_53
       rect:
         serializedVersion: 2
         x: 81
@@ -1237,14 +1250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ea2378b977023b41bd91421b10b3cf1
-      internalID: -428393145
+      spriteID: cd30874bb0ddf6d4ea09e86fccd0ca32
+      internalID: 1937138333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_54
+      name: Cards_54
       rect:
         serializedVersion: 2
         x: 162
@@ -1258,14 +1271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 651bd4f7640de154eb60923c28d6b348
-      internalID: -613553844
+      spriteID: 0b35ae2b44f7e594dbb8452b805f666e
+      internalID: 1012813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_55
+      name: Cards_55
       rect:
         serializedVersion: 2
         x: 243
@@ -1279,14 +1292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545f89551c09db046a130a4b2a431d24
-      internalID: 584119948
+      spriteID: a8c8d9514e495ca498abbd0c754f6e47
+      internalID: -1753370580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_56
+      name: Cards_56
       rect:
         serializedVersion: 2
         x: 324
@@ -1300,14 +1313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de63830bf265da0498ac8d4e4de9314c
-      internalID: 811103983
+      spriteID: e208f8a8bc49ba342a1e0637af2da189
+      internalID: -930189211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WZ9Od_57
+      name: Cards_57
       rect:
         serializedVersion: 2
         x: 405
@@ -1321,155 +1334,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 441a097b879b4324ebe25856a56cd667
-      internalID: -1227844128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_58
-      rect:
-        serializedVersion: 2
-        x: 486
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 589e0c3d5eafba44a8aaac3387394443
-      internalID: -1384088002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_59
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85c942977937dbe449e2b2aba45771db
-      internalID: 602843393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_60
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5dfd24af41a5054798c662b783a58c1
-      internalID: -1849331971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_61
-      rect:
-        serializedVersion: 2
-        x: 729
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4479fac0878ccc14f91cccada34d87bb
-      internalID: -1378409571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_62
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8f6f4ac5bbb65145b881433d46da81e
-      internalID: 1649597293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_63
-      rect:
-        serializedVersion: 2
-        x: 891
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d48ab1c64d225db47a2cf6a8744d7561
-      internalID: 386483937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WZ9Od_64
-      rect:
-        serializedVersion: 2
-        x: 972
-        y: 2
-        width: 81
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2607246efcd2b214aa4de54ebc35516e
-      internalID: -111967340
+      spriteID: 4a03f6ed7304b0a4e999aa3375c38adb
+      internalID: -1078388590
       vertices: []
       indices: 
       edges: []
@@ -1485,71 +1351,71 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WZ9Od_0: -664118588
-      WZ9Od_1: 1482309674
-      WZ9Od_10: 1262004417
-      WZ9Od_11: 411426209
-      WZ9Od_12: -1496025363
-      WZ9Od_13: -1618617842
-      WZ9Od_14: -1303801044
-      WZ9Od_15: 729818949
-      WZ9Od_16: 484102407
-      WZ9Od_17: 1880502123
-      WZ9Od_18: 383382722
-      WZ9Od_19: 2069891047
-      WZ9Od_2: 1284828235
-      WZ9Od_20: 1095678468
-      WZ9Od_21: -1778645463
-      WZ9Od_22: 717679610
-      WZ9Od_23: -975669153
-      WZ9Od_24: -1778314695
-      WZ9Od_25: -137904730
-      WZ9Od_26: 1897420253
-      WZ9Od_27: -1704953844
-      WZ9Od_28: 1592077835
-      WZ9Od_29: -1284183720
-      WZ9Od_3: 1574324496
-      WZ9Od_30: -65195414
-      WZ9Od_31: -1191870489
-      WZ9Od_32: -1640005391
-      WZ9Od_33: 1371743685
-      WZ9Od_34: 1028087467
-      WZ9Od_35: 431533116
-      WZ9Od_36: 984997337
-      WZ9Od_37: 310133801
-      WZ9Od_38: -1197322808
-      WZ9Od_39: 431861899
-      WZ9Od_4: 1407720715
-      WZ9Od_40: -1982272107
-      WZ9Od_41: -378657474
-      WZ9Od_42: -2101501352
-      WZ9Od_43: -759442349
-      WZ9Od_44: 1045271026
-      WZ9Od_45: 709394160
-      WZ9Od_46: 268443350
-      WZ9Od_47: 509657555
-      WZ9Od_48: -985961561
-      WZ9Od_49: -1417422003
-      WZ9Od_5: -932333720
-      WZ9Od_50: -1244004696
-      WZ9Od_51: 253718833
-      WZ9Od_52: -1883555515
-      WZ9Od_53: -428393145
-      WZ9Od_54: -613553844
-      WZ9Od_55: 584119948
-      WZ9Od_56: 811103983
-      WZ9Od_57: -1227844128
-      WZ9Od_58: -1384088002
-      WZ9Od_59: 602843393
-      WZ9Od_6: -1578792055
-      WZ9Od_60: -1849331971
-      WZ9Od_61: -1378409571
-      WZ9Od_62: 1649597293
-      WZ9Od_63: 386483937
-      WZ9Od_64: -111967340
-      WZ9Od_7: -2082442834
-      WZ9Od_8: -1883381020
-      WZ9Od_9: -1353203585
+      Cards_0: -665931989
+      Cards_1: -299504179
+      Cards_10: -546870902
+      Cards_11: 1693285892
+      Cards_12: 52838391
+      Cards_13: -1475735336
+      Cards_14: -1707914841
+      Cards_15: -320058887
+      Cards_16: 1266345453
+      Cards_17: -1629017192
+      Cards_18: 1462601928
+      Cards_19: 678446242
+      Cards_2: -1541714388
+      Cards_20: 1051972012
+      Cards_21: 1954721534
+      Cards_22: 2123303669
+      Cards_23: -455551882
+      Cards_24: -1159185399
+      Cards_25: -1624886946
+      Cards_26: 2011054806
+      Cards_27: -1222632198
+      Cards_28: -235785133
+      Cards_29: 1621978799
+      Cards_3: 648872338
+      Cards_30: -1411939473
+      Cards_31: -1570387691
+      Cards_32: -1470310579
+      Cards_33: -163123511
+      Cards_34: -911944076
+      Cards_35: -1638519647
+      Cards_36: -1528105539
+      Cards_37: 1804748969
+      Cards_38: -1373563201
+      Cards_39: 158274068
+      Cards_4: -486167073
+      Cards_40: 714047540
+      Cards_41: -1905947379
+      Cards_42: -1195007212
+      Cards_43: -741335588
+      Cards_44: -718652204
+      Cards_45: 1473198693
+      Cards_46: 1580575578
+      Cards_47: -535967632
+      Cards_48: -1944562169
+      Cards_49: 1534700633
+      Cards_5: 1873402856
+      Cards_50: -1800795518
+      Cards_51: 1992810772
+      Cards_52: -2015684905
+      Cards_53: 1937138333
+      Cards_54: 1012813
+      Cards_55: -1753370580
+      Cards_56: -930189211
+      Cards_57: -1078388590
+      Cards_58: 1903577863
+      Cards_59: -408570954
+      Cards_6: -47713427
+      Cards_60: -993025905
+      Cards_61: -2036234774
+      Cards_62: -1410063298
+      Cards_63: -1502056970
+      Cards_64: 55646365
+      Cards_7: 377498254
+      Cards_8: -1011424462
+      Cards_9: 456752323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
