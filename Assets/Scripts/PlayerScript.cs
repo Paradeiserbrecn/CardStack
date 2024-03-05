@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
-{
-    [SerializeField] public static Object card;
-    
+{    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +18,11 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    public static Card DrawCard()
+    public static Card DrawCardFromTop()
     {
-        GameObject newCardObject = Instantiate(card) as GameObject;
-        Card newCard = newCardObject.GetComponent<Card>();
+        throw new NotImplementedException();
+        // de kortn de i ziag hot mi als owner
+        //NetworkManager.Singleton.LocalClientId;
         
-
-
-        return newCard;
     }
 }
