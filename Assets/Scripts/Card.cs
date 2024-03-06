@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum CardTypes
@@ -16,17 +14,27 @@ public class Card : MonoBehaviour
 {
     [SerializeField] private Sprite[] cardFaces;
     [HideInInspector] public bool showCard = false;
-    SpriteRenderer spriteRenderer;
-    public readonly CardTypes CardType;
-    public ulong OwnerId;
-    // Start is called before the first frame update
-    public Card (CardTypes cardType, ulong? ownerId)
-    {
-        this.CardType = cardType;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = cardFaces[(int)CardTypes.CardBack];
-        if (ownerId.HasValue) OwnerId = (ulong)ownerId;
+    public SpriteRenderer spriteRenderer;
+
+    private CardTypes _cardTypes = CardTypes.CardBack;
+    public CardTypes CardType { 
+        get { return _cardTypes; } 
+        set { 
+            if (_cardTypes == CardTypes.CardBack)
+            {
+                _cardTypes = value;
+                spriteRenderer.sprite = cardFaces[(int)value];
+            }
+        } 
     }
+    public ulong OwnerId;
+    
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    
+
 
     public bool setVisibility(bool showCard = true) 
     {

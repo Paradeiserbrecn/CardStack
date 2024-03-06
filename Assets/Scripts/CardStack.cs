@@ -1,16 +1,14 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using Random = System.Random;
 
 public class CardStack : MonoBehaviour
 {
-    public static List<Card> initialCards = new();
-    public static List<Card> currentCards = new();
+    [SerializeField] private GameObject cardPrefab;
+    public List<Card> initialCards = new();
+    public List<Card> currentCards = new();
 
     void Start()
     {
@@ -20,13 +18,15 @@ public class CardStack : MonoBehaviour
         ResetCurrentCards();
     }
 
-    private static List<Card> PopulateDebugCards()
+    private List<Card> PopulateDebugCards()
     {
         IEnumerable<CardTypes> cardTypes = Enum.GetValues(typeof(CardTypes)).Cast<CardTypes>();
         List<Card> cards = new();
         foreach (CardTypes cardType in cardTypes)
         {
-            Card card = new(cardType, Convert.ToUInt64(-1));
+            GameObject cardObject = Instantiate(cardPrefab, transform);
+            Card card = cardObject.GetComponent<Card>();
+            card.CardType = cardType;
             cards.Add(card);
         }
         return cards;
@@ -34,7 +34,7 @@ public class CardStack : MonoBehaviour
 
     private static readonly Random rng = new();
 
-    public static List<Card> ShuffleCurrentCards()
+    public List<Card> ShuffleCurrentCards()
     {
         return currentCards = currentCards.OrderBy(_ => rng.Next()).ToList();
     }
@@ -48,24 +48,14 @@ public class CardStack : MonoBehaviour
     }
 
     #region removeCards
-    public Card RemoveTopCard()
+    public Card RemoveTopCard () => RemoveCard(currentCards.First());
+    public Card RemoveBottomCard() => RemoveCard(currentCards.Last());
+    public Card RemoveRandomCard() => RemoveCard(currentCards.ElementAt(rng.Next(currentCards.Count() - 1)));
+    
+    private Card RemoveCard(Card card)
     {
-        Card card = currentCards.First();
         currentCards.Remove(card);
-        return card;
-    }
-
-    public Card RemoveBottomCard()
-    {
-        Card card = currentCards.Last();
-        currentCards.Remove(card);
-        return card;
-    }
-
-    public Card RemoveRandomCard()
-    {
-        Card card = currentCards.ElementAt(rng.Next(currentCards.Count()-1));
-        currentCards.Remove(card);
+        if (currentCards.Count == 0) { ResetCurrentCards(); }
         return card;
     }
     #endregion
