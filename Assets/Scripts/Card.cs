@@ -14,8 +14,8 @@ public class Card : MonoBehaviour
 {
     [SerializeField] private Sprite[] cardFaces;
     [HideInInspector] public bool showCard = false;
-    public SpriteRenderer spriteRenderer;
-    private float currentRotation;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
+    [HideInInspector] public ulong OwnerId;
 
     private CardTypes _cardTypes = CardTypes.CardBack;
     public CardTypes CardType { 
@@ -28,19 +28,12 @@ public class Card : MonoBehaviour
             }
         } 
     }
-    public ulong OwnerId;
     
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
-    public void RotateAroundGrabber(GrabberScript grabber, int i, float rotationPerCard)
-    {
-        transform.SetParent(grabber.spacer, false);
-        transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
-        transform.RotateAround(grabber.gameObject.transform.position, Vector3.forward, rotationPerCard * i);
-    }
 
 
     public bool setVisibility(bool showCard = true) 

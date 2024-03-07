@@ -7,8 +7,8 @@ using Random = System.Random;
 public class CardStack : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
-    public List<Card> initialCards = new();
-    public List<Card> currentCards = new();
+    [HideInInspector] public List<Card> initialCards = new();
+    [HideInInspector] public List<Card> currentCards = new();
 
     void Start()
     {

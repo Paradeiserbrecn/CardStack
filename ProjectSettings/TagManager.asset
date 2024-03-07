@@ -41,6 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: CardsInHand
-    uniqueID: 2258224131
-    locked: 0
