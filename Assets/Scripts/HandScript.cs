@@ -1,37 +1,42 @@
+using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class HandScript : MonoBehaviour
 {
+    [SerializeField] private float offsetY = 1f;
     private CardStack cardStack;
     private List<Card> cardsInHand;
-    private GrabberScript grabber;
 
     // Start is called before the first frame update
     void Start()
     {
+        transform.localPosition = new Vector3(0, Camera.main.orthographicSize * -1);
         cardStack = FindObjectOfType<CardStack>();
         cardsInHand = new();
-        grabber = GetComponentInChildren<GrabberScript>();
     }
 
     // Update is called once per frame
-    void Update()
+    
+
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        foreach (Card card in cardsInHand)
         {
-            DrawCardFromTop();
+            card.transform.localPosition = new Vector3(card.transform.localPosition.x, -math.pow(card.transform.localPosition.x*.25f, 2)-transform.localPosition.y+offsetY);
+            card.transform.up = transform.localPosition - card.transform.localPosition;
         }
     }
 
-    private void DrawCardFromTop()
+    internal void DrawCardFromTop(ulong playerId)
     {
         Card cardToAdd = cardStack.RemoveTopCard();
         cardsInHand.Add(cardToAdd);
         cardToAdd.spriteRenderer.sortingOrder = cardsInHand.Count;
-        cardToAdd.spriteRenderer.sortingLayerID = SortingLayer.layers[1].id;
+        cardToAdd.transform.SetParent(transform, false);
 
-        grabber.SpreadCards(cardsInHand);
-
+        cardToAdd.OwnerId = playerId;
     }
+
 }

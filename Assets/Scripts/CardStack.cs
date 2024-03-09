@@ -10,8 +10,14 @@ public class CardStack : MonoBehaviour
     [HideInInspector] public List<Card> initialCards = new();
     [HideInInspector] public List<Card> currentCards = new();
 
+    public float positionOffsetX = -2.5f;
+    public float positionOffsetY = -2.5f;
+
     void Start()
     {
+        var upperRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
+        transform.position = new Vector3(upperRightScreen.x + positionOffsetX, upperRightScreen.y + positionOffsetY, transform.position.z);
+
         // TODO: Remove this whenever you add cardstack selection
         initialCards = PopulateDebugCards();
 
@@ -25,7 +31,8 @@ public class CardStack : MonoBehaviour
         foreach (CardTypes cardType in cardTypes)
         {
             GameObject cardObject = Instantiate(cardPrefab, transform);
-            Card card = cardObject.GetComponent<Card>();
+            Card card = cardObject.GetComponentInChildren<Card>();
+
             card.CardType = cardType;
             cards.Add(card);
         }

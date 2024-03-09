@@ -1,4 +1,6 @@
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public enum CardTypes
 {
@@ -15,32 +17,54 @@ public class Card : MonoBehaviour
     [SerializeField] private Sprite[] cardFaces;
     [HideInInspector] public bool showCard = false;
     [HideInInspector] public SpriteRenderer spriteRenderer;
-    [HideInInspector] public ulong OwnerId;
+
+    private ulong _ownerId;
+    public ulong OwnerId
+    {
+        get => _ownerId;
+        set
+        {
+            if (value == NetworkManager.Singleton.LocalClientId)
+            {
+                spriteRenderer.sprite = cardFaces[(int)CardType];
+            }
+            else
+            {
+                spriteRenderer.sprite = cardFaces[(int)CardTypes.CardBack];
+            }
+            _ownerId = value;
+        }
+    }
+
 
     private CardTypes _cardTypes = CardTypes.CardBack;
-    public CardTypes CardType { 
-        get { return _cardTypes; } 
-        set { 
+    public CardTypes CardType {
+        get => _cardTypes;
+        set {
             if (_cardTypes == CardTypes.CardBack)
             {
                 _cardTypes = value;
                 spriteRenderer.sprite = cardFaces[(int)value];
             }
-        } 
+        }
     }
-    
+
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
-    
 
 
-    public bool setVisibility(bool showCard = true) 
+    public bool setVisibility(bool showCard = true)
     {
         this.showCard = showCard;
         if (showCard) spriteRenderer.sprite = cardFaces[(int)CardType];
         else spriteRenderer.sprite = cardFaces[(int)CardTypes.CardBack];
         return showCard;
+    }
+
+    private void OnMouseDown()
+    {
+        Debug.Log(CardType);
     }
 }
