@@ -1,11 +1,16 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
 public class RpcPlayer : NetworkBehaviour
 {
     public NetworkVariable<int> spacePressed = new(0);
-    
+    private CardStackRpc cardStack;
 
+    private void Start()
+    {
+        cardStack = GameObject.FindWithTag("CardStack").GetComponent<CardStackRpc>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -13,9 +18,16 @@ public class RpcPlayer : NetworkBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                IncreaseAndLogSpacesPressedRpc();
+                //IncreaseAndLogSpacesPressedRpc();
+                DrawCardFromTop();
             }
         }
+    }
+
+    private void DrawCardFromTop()
+    {
+        CardObject card = cardStack.RemoveTopCard();
+        Debug.Log("Drew card: " + card);
     }
 
     [Rpc(SendTo.Server)]

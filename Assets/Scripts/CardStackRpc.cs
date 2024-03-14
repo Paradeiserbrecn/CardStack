@@ -1,13 +1,18 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
 public class CardStackRpc : NetworkBehaviour
 {
-    private readonly NetworkList<CardObject> cards = new();
+    private NetworkList<CardObject> cards;
+    public int count = 0;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        cards = new();
+    }
     public override void OnNetworkSpawn()
     {
         if (IsServer)
@@ -27,19 +32,37 @@ public class CardStackRpc : NetworkBehaviour
         if (cards.CanClientWrite(NetworkManager.LocalClientId))
             foreach (CardTypes cardType in cardTypes)
             {
-                cards.Add((int)cardType);
+                cards.Add(new CardObject(cardType));
             }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public override void OnDestroy()
-    {
-        cards.Dispose();
+        count = cards.Count;
     }
 
+    private static readonly System.Random rng = new();
+
+    #region removeCards
+    public CardObject RemoveTopCard() => RemoveCard(cards[0]);
+
+    public CardObject RemoveBottomCard() => RemoveCard(cards[cards.Count-1]);
+
+    public CardObject RemoveRandomCard() => RemoveCard(cards[rng.Next(cards.Count - 1)]);
+
+    private CardObject RemoveCard(CardObject card)
+    {
+        RemoveCardRpc(card);
+        return card;
+    }
+
+    [Rpc(SendTo.Server)]
+    private void RemoveCardRpc(CardObject card)
+    {
+        Debug.Log("removing card from cardstack: " + card);
+        cards.Remove(card);
+    }
+    #endregion
 
 }
