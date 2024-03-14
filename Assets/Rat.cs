@@ -28,15 +28,6 @@ public class Rat : NetworkBehaviour
         Position.Value = randomPosition;
     }
 
-    static void SubmitNewPosition()
-    {
-        if (GUILayout.Button(NetworkManager.Singleton.IsServer ? "Move" : "Request Position Change"))
-        {
-            var playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
-            var player = playerObject.GetComponent<Rat>();
-            player.Move();
-        }
-    }
 
     static Vector2 GetRandomPositionOnScreen()
     {
