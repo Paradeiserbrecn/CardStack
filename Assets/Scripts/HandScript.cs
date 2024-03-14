@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.Netcode;
 using UnityEngine;
 
 public class HandScript : MonoBehaviour
@@ -29,14 +32,18 @@ public class HandScript : MonoBehaviour
 
     [Rpc(SendTo.Server)]
     internal void DrawCardFromTopRpc(ulong playerId)
+    [Rpc(SendTo.Server)]
+    internal void DrawCardFromTopRpc(ulong playerId)
     {
         /*
         Card cardToAdd = cardStack.RemoveTopCard();
         cardsInHand.Add(cardToAdd);
         cardToAdd.spriteRenderer.sortingOrder = cardsInHand.Count;
         cardToAdd.transform.SetParent(transform, false);
+        cardToAdd.transform.SetParent(transform, false);
 
         cardToAdd.GetComponent<NetworkObject>().ChangeOwnership(playerId);
         */
     }
+
 }
