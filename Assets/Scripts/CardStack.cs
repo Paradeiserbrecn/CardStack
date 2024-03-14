@@ -1,38 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Netcode;
 using UnityEngine;
 using Random = System.Random;
 
-public class CardStack : NetworkBehaviour
+public class CardStack : MonoBehaviour
 {
     [SerializeField] private GameObject cardPrefab;
-    [HideInInspector] public NetworkVariable<List<Card>> initialCards = new();
-    [HideInInspector] public NetworkVariable<List<Card>> currentCards = new();
-
-    public float positionOffsetX = -2.5f;
-    public float positionOffsetY = -2.5f;
-
-    
+    [HideInInspector] public List<Card> initialCards = new();
+    [HideInInspector] public List<Card> currentCards = new();
 
     void Start()
     {
-        var upperRightScreen = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
-        transform.position = new Vector3(upperRightScreen.x + positionOffsetX, upperRightScreen.y + positionOffsetY, transform.position.z);
+        // TODO: Remove this whenever you add cardstack selection
+        initialCards = PopulateDebugCards();
+
+        ResetCurrentCards();
     }
-
-    public override void OnNetworkSpawn()
-    {
-        if (IsServer)
-        {
-            // TODO: Remove this whenever you add cardstack selection
-            initialCards.Value = PopulateDebugCards();
-
-            ResetCurrentCardsRpc();
-        }
-    }
-
 
     private List<Card> PopulateDebugCards()
     {
@@ -41,8 +25,7 @@ public class CardStack : NetworkBehaviour
         foreach (CardTypes cardType in cardTypes)
         {
             GameObject cardObject = Instantiate(cardPrefab, transform);
-            Card card = cardObject.GetComponentInChildren<Card>();
-
+            Card card = cardObject.GetComponent<Card>();
             card.CardType = cardType;
             cards.Add(card);
         }
@@ -50,38 +33,30 @@ public class CardStack : NetworkBehaviour
     }
 
     private static readonly Random rng = new();
-    
-    [Rpc(SendTo.Server)]
-    public void ShuffleCurrentCardsRpc()
+
+    public List<Card> ShuffleCurrentCards()
     {
-        currentCards.Value = currentCards.Value.OrderBy(_ => rng.Next()).ToList();
+        return currentCards = currentCards.OrderBy(_ => rng.Next()).ToList();
     }
 
-    [Rpc(SendTo.Server)]
-    private void ResetCurrentCardsRpc()
+    private List<Card> ResetCurrentCards()
     {
-        currentCards.Value = new List<Card>(initialCards.Value);
-        ShuffleCurrentCardsRpc();
+        currentCards = new List<Card>(initialCards);
+        ShuffleCurrentCards();
+
+        return currentCards;
     }
 
     #region removeCards
-    public Card RemoveTopCard () => RemoveCard(currentCards.Value.First());
-
-    public Card RemoveBottomCard() => RemoveCard(currentCards.Value.Last());
-
-    public Card RemoveRandomCard() => RemoveCard(currentCards.Value.ElementAt(rng.Next(currentCards.Value.Count() - 1)));
-
+    public Card RemoveTopCard () => RemoveCard(currentCards.First());
+    public Card RemoveBottomCard() => RemoveCard(currentCards.Last());
+    public Card RemoveRandomCard() => RemoveCard(currentCards.ElementAt(rng.Next(currentCards.Count() - 1)));
+    
     private Card RemoveCard(Card card)
     {
-        RemoveCardRpc(card);
+        currentCards.Remove(card);
+        if (currentCards.Count == 0) { ResetCurrentCards(); }
         return card;
-    }
-
-    private void RemoveCardRpc(Card card)
-    {
-        //Debug.Log("removing card from cardstack: " + card.CardType);
-        currentCards.Value.Remove(card);
-        if (currentCards.Value.Count == 0) { ResetCurrentCardsRpc(); }
     }
     #endregion
 
