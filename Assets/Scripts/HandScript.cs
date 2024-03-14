@@ -29,6 +29,7 @@ public class HandScript : MonoBehaviour
             card.transform.up = transform.localPosition - card.transform.localPosition;
         }
     }
+
     [Rpc(SendTo.Server)]
     internal void DrawCardFromTopRpc(ulong playerId)
     {
