@@ -1,6 +1,6 @@
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public enum CardTypes
 {
@@ -15,9 +15,12 @@ public enum CardTypes
 public class Card : MonoBehaviour
 {
     [SerializeField] private Sprite[] cardFaces;
-    [HideInInspector] public bool showCard = false;
+    [HideInInspector] public NetworkVariable<bool> showCard;
     [HideInInspector] public SpriteRenderer spriteRenderer;
+    private NetworkVariable<CardTypes> _cardType;
+    public CardTypes CardType {  get { return _cardType.Value; } set {  _cardType.Value = value; } }
 
+    /*
     private ulong _ownerId;
     public ulong OwnerId
     {
@@ -35,29 +38,20 @@ public class Card : MonoBehaviour
             _ownerId = value;
         }
     }
+    */
 
 
-    private CardTypes _cardTypes = CardTypes.CardBack;
-    public CardTypes CardType {
-        get => _cardTypes;
-        set {
-            if (_cardTypes == CardTypes.CardBack)
-            {
-                _cardTypes = value;
-                spriteRenderer.sprite = cardFaces[(int)value];
-            }
-        }
-    }
 
-    private void Awake()
+    private void Start()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        showCard.Value = false;
+        _cardType.Value = CardTypes.CardBack;
     }
-
 
     public bool setVisibility(bool showCard = true)
     {
-        this.showCard = showCard;
+        this.showCard.Value = showCard;
         if (showCard) spriteRenderer.sprite = cardFaces[(int)CardType];
         else spriteRenderer.sprite = cardFaces[(int)CardTypes.CardBack];
         return showCard;
@@ -67,4 +61,5 @@ public class Card : MonoBehaviour
     {
         Debug.Log(CardType);
     }
+
 }

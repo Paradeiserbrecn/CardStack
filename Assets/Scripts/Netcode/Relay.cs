@@ -56,7 +56,7 @@ public class Relay : MonoBehaviour
         _buttons.SetActive(false);
 
         JoinAllocation a = await RelayService.Instance.JoinAllocationAsync(_joinInput.text);
-        _joinCodeText.text = await RelayService.Instance.GetJoinCodeAsync(a.AllocationId);
+        _joinCodeText.text = _joinInput.text;
 
 
         _transport.SetClientRelayData(a.RelayServer.IpV4, (ushort)a.RelayServer.Port, a.AllocationIdBytes, a.Key, a.ConnectionData, a.HostConnectionData);

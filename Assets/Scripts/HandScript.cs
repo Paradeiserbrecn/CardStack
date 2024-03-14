@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.Netcode;
 using UnityEngine;
 
 public class HandScript : MonoBehaviour
@@ -28,15 +29,15 @@ public class HandScript : MonoBehaviour
             card.transform.up = transform.localPosition - card.transform.localPosition;
         }
     }
-
-    internal void DrawCardFromTop(ulong playerId)
+    [Rpc(SendTo.Server)]
+    internal void DrawCardFromTopRpc(ulong playerId)
     {
         Card cardToAdd = cardStack.RemoveTopCard();
         cardsInHand.Add(cardToAdd);
         cardToAdd.spriteRenderer.sortingOrder = cardsInHand.Count;
         cardToAdd.transform.SetParent(transform, false);
 
-        cardToAdd.OwnerId = playerId;
+        cardToAdd.GetComponent<NetworkObject>().ChangeOwnership(playerId);
     }
 
 }
