@@ -6,10 +6,12 @@ public class RpcPlayer : NetworkBehaviour
 {
     public NetworkVariable<int> spacePressed = new(0);
     private CardStackRpc cardStack;
+    private HandScript handScript;
 
     private void Start()
     {
         cardStack = GameObject.FindWithTag("CardStack").GetComponent<CardStackRpc>();
+        handScript = GetComponentInChildren<HandScript>();
     }
     // Update is called once per frame
     void Update()
@@ -28,6 +30,8 @@ public class RpcPlayer : NetworkBehaviour
     {
         CardObject card = cardStack.RemoveTopCard();
         Debug.Log("Drew card: " + card);
+        handScript.PlaceCardInHandRpc(card);
+        
     }
 
     [Rpc(SendTo.Server)]

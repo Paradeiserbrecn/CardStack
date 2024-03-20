@@ -13,6 +13,7 @@ public class CardStackRpc : NetworkBehaviour
     {
         cards = new();
     }
+
     public override void OnNetworkSpawn()
     {
         if (IsServer)
@@ -43,6 +44,20 @@ public class CardStackRpc : NetworkBehaviour
     }
 
     private static readonly System.Random rng = new();
+
+    public void AddAsTopCard(CardObject card) => AddCardAtIndexRpc(card, 0);
+
+    public void AddAsBottomCard(CardObject card) => AddCardAtIndexRpc(card, cards.Count);
+
+    public void AddAsRandomCard(CardObject card) => AddCardAtIndexRpc(card, rng.Next(cards.Count));
+
+
+    [Rpc(SendTo.Server)]
+    private void AddCardAtIndexRpc(CardObject card, int index)
+    {
+        Debug.Log("Adding card to cardstack at position: " + card + " " + index);
+        cards.Insert(index, card);
+    }
 
     #region removeCards
     public CardObject RemoveTopCard() => RemoveCard(cards[0]);

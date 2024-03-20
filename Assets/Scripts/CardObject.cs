@@ -1,21 +1,21 @@
 using System;
 using System.Text;
 using Unity.Netcode;
+using UnityEngine;
 
 public struct CardObject : IEquatable<CardObject>, IEquatable<CardTypes>, INetworkSerializable
 {
-    CardTypes cardType;
-    bool VisibleToEveryone;
+    internal CardTypes cardType;
 
-    public CardObject(CardTypes cardType, bool visibleToEveryone = false)
+
+    public CardObject(CardTypes cardType)
     {
         this.cardType = cardType;
-        this.VisibleToEveryone = visibleToEveryone;
     }
 
     public readonly bool Equals(CardObject other)
     {
-        return cardType == other.cardType && VisibleToEveryone == other.VisibleToEveryone;
+        return cardType == other.cardType;
     }
 
     public readonly bool Equals(CardTypes other)
@@ -29,13 +29,11 @@ public struct CardObject : IEquatable<CardObject>, IEquatable<CardTypes>, INetwo
         {
             var reader = serializer.GetFastBufferReader();
             reader.ReadValueSafe(out cardType);
-            reader.ReadValueSafe(out VisibleToEveryone);
         } 
         else
         {
             var writer = serializer.GetFastBufferWriter();
             writer.WriteValueSafe(cardType);
-            writer.WriteValueSafe(VisibleToEveryone);
         }
     }
 
@@ -43,8 +41,6 @@ public struct CardObject : IEquatable<CardObject>, IEquatable<CardTypes>, INetwo
     {
         StringBuilder sb = new("{");
         sb.Append(cardType);
-        sb.Append(", VisibleToEveryone: ");
-        sb.Append(VisibleToEveryone);
         sb.Append("}");
         return sb.ToString();
     }
