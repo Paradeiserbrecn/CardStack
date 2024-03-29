@@ -1,10 +1,11 @@
-using System;
+using Unity.Mathematics;
 using Unity.Netcode;
 using UnityEngine;
 
 public class RpcPlayer : NetworkBehaviour
 {
     public NetworkVariable<int> spacePressed = new(0);
+    [SerializeField] private Object prefab;
     private CardStackRpc cardStack;
     private HandScript handScript;
 
@@ -12,6 +13,7 @@ public class RpcPlayer : NetworkBehaviour
     {
         cardStack = GameObject.FindWithTag("CardStack").GetComponent<CardStackRpc>();
         handScript = GetComponentInChildren<HandScript>();
+        transform.position = new Vector2(0, -Camera.main.orthographicSize);
     }
     // Update is called once per frame
     void Update()
@@ -20,7 +22,6 @@ public class RpcPlayer : NetworkBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //IncreaseAndLogSpacesPressedRpc();
                 DrawCardFromTop();
             }
         }
@@ -30,21 +31,25 @@ public class RpcPlayer : NetworkBehaviour
     {
         CardObject card = cardStack.RemoveTopCard();
         Debug.Log("Drew card: " + card);
-        handScript.PlaceCardInHandRpc(card);
-        
+        DrawCardToHandOnServerRpc(card, OwnerClientId);
+
     }
+
 
     [Rpc(SendTo.Server)]
-    void IncreaseAndLogSpacesPressedRpc ()
+    internal void DrawCardToHandOnServerRpc(CardObject card, ulong ownerClientId)
     {
-        spacePressed.Value += 1;
-        LogSpacesPressedRpc();
+        GameObject prefabGameObject = (CardGameObject.Instantiate(prefab) as GameObject);
+        CardGameObject cardGameObject = prefabGameObject.GetComponent<CardGameObject>();
+        cardGameObject.GetComponent<NetworkObject>().SpawnWithOwnership(ownerClientId);
+        cardGameObject.Card = card;
+        Debug.Log("Trying to spawn Networkobject: " + cardGameObject.Card);
     }
 
-    [Rpc(SendTo.ClientsAndHost)]
-    void LogSpacesPressedRpc ()
-    {
-        Debug.Log($"Player {NetworkManager.LocalClientId} pressed space {spacePressed.Value} times");
+    //TODO: Figure out how to pass the created gameobject to the client so they can put the card in hand and do operations on it
 
-    }
+    //[Rpc(SendTo.ClientsAndHost)]
+    //private void PutCardInHandRpc(GameObject card) => handScript.addCardToList(card);
+
+
 }

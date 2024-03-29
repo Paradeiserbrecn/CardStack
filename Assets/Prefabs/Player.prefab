@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55de8c1633fd57c4c99c742501ba83c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7538528789373328472, guid: e94e0c8a7bb95ea43bf38b97d8f8bf9f, type: 3}
+  verticalOffset: 0
 --- !u!1 &6830071992397044963
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,3 +114,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spacePressed:
     m_InternalValue: 0
+  prefab: {fileID: 7538528789373328472, guid: e94e0c8a7bb95ea43bf38b97d8f8bf9f, type: 3}

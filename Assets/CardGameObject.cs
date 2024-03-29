@@ -9,6 +9,7 @@ public class CardGameObject : NetworkBehaviour
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite[] CardSprites;
     [SerializeField] private NetworkVariable<CardObject> _card = new(new(CardTypes.CardBack));
+    #region Card
     public CardObject Card
     {
         get => _card.Value;
@@ -22,53 +23,55 @@ public class CardGameObject : NetworkBehaviour
     private void SetCardRpc(CardObject value)
     {
         Debug.Log("Setting card on server");
-
         _card.Value = value;
-        SetSpriteRpc();
     }
 
-    [SerializeField] private bool _isVisible = false;
+    private void OnIsCardChanged(CardObject prev, CardObject current)
+    {
+        if (IsVisible) spriteRenderer.sprite = CardSprites[(int)current.cardType];
+        else spriteRenderer.sprite = CardSprites[(int)CardTypes.CardBack];
+    }
+    #endregion
+    #region isVisible
+
+    [SerializeField] private NetworkVariable<bool> _isVisible = new(false);
     public bool IsVisible
     {
-        get => _isVisible;
+        get => _isVisible.Value;
         set
         {
-            Debug.Log("Setting IsVisible for card: " + this);
-            SetIsVisibleRpc(value);
+            Debug.Log("Setting IsVisible for card: " + this.Card + " to " + value);
+            SetIsVisibleOnServerRpc(value);
         }
     }
 
     [Rpc(SendTo.Server)]
-    private void SetIsVisibleRpc(bool value)
+    private void SetIsVisibleOnServerRpc(bool value)
     {
-        Debug.Log("Setting visibility on server");
-        _isVisible = value;
-        SetSpriteRpc();
+        Debug.Log("Setting visibility on server to: " + value);
+        _isVisible.Value = value;
     }
-
-    [Rpc(SendTo.Everyone)]
-    private void SetSpriteRpc()
+    private void OnIsVisibleChanged(bool prev, bool current)
     {
-        Debug.Log("Setting visibility for everyone");
-
-        if (_isVisible) spriteRenderer.sprite = CardSprites[(int)Card.cardType];
+        if (current) spriteRenderer.sprite = CardSprites[(int)Card.cardType];
         else spriteRenderer.sprite = CardSprites[(int)CardTypes.CardBack];
+        Debug.Log("Updated sprite for everyone to: " + spriteRenderer.sprite.name + " because isVisible is set to: " + IsVisible);
     }
+    #endregion
 
-    void Awake()
+    void Awake() => spriteRenderer = GetComponent<SpriteRenderer>();
+    public override void OnNetworkSpawn()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _isVisible.OnValueChanged = OnIsVisibleChanged;
+        _card.OnValueChanged = OnIsCardChanged;
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("OnMouseDown Captured");
-        IsVisible = !IsVisible;
+        if (IsOwner)
+        {
+            Debug.Log("OnMouseDown Captured");
+            IsVisible = !IsVisible;
+        }
     }
 }
