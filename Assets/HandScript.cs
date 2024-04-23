@@ -7,7 +7,7 @@ using UnityEngine;
 public class HandScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    private List<CardGameObject> cards;
+    private List<CardGameObject> cards = new();
 
     private float offsetY = 0;
     void Start()
@@ -25,6 +25,7 @@ public class HandScript : MonoBehaviour
     }
     public void addCardToList(GameObject card)
     {
+        Debug.Log("Shit di nit ein");
         cards.Add(card.GetComponent<CardGameObject>());
     }
 }

@@ -1,5 +1,6 @@
 using Unity.Mathematics;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RpcPlayer : NetworkBehaviour
@@ -39,17 +40,16 @@ public class RpcPlayer : NetworkBehaviour
     [Rpc(SendTo.Server)]
     internal void DrawCardToHandOnServerRpc(CardObject card, ulong ownerClientId)
     {
-        GameObject prefabGameObject = (CardGameObject.Instantiate(prefab) as GameObject);
+        GameObject prefabGameObject = CardGameObject.Instantiate(prefab, this.transform).GameObject();
         CardGameObject cardGameObject = prefabGameObject.GetComponent<CardGameObject>();
         cardGameObject.GetComponent<NetworkObject>().SpawnWithOwnership(ownerClientId);
         cardGameObject.Card = card;
         Debug.Log("Trying to spawn Networkobject: " + cardGameObject.Card);
+        //PutCardInHandRpc(cardGameObject.gameObject);
     }
 
     //TODO: Figure out how to pass the created gameobject to the client so they can put the card in hand and do operations on it
 
     //[Rpc(SendTo.ClientsAndHost)]
     //private void PutCardInHandRpc(GameObject card) => handScript.addCardToList(card);
-
-
 }
